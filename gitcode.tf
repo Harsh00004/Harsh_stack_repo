@@ -93,7 +93,7 @@ resource "aws_instance" "harsh_ec2" {
   subnet_id                   = aws_subnet.harsh_subnet.id
   vpc_security_group_ids      = [aws_security_group.harsh_sg.id]
   associate_public_ip_address = true
-  key_name                    = "newkp (1)"
+  key_name                    = "harsh-key"
   tags = {
     Name = "HarshEC2"
   }
@@ -105,4 +105,5 @@ output "ec2_public_ip" {
 
 output "s3_bucket_name" {
   value = aws_s3_bucket.harsh_bucket.bucket
+
 }
