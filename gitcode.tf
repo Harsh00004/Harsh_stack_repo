@@ -24,7 +24,7 @@ resource "aws_vpc" "harsh_vpc" {
 resource "aws_subnet" "harsh_subnet" {
   vpc_id                  = aws_vpc.harsh_vpc.id
   cidr_block              = "10.0.1.0/24"
-  availability_zone       = "us-west-1a"
+  availability_zone       = "us-west-1"
   map_public_ip_on_launch = true
   tags = {
     Name = "HarshSubnet"
@@ -106,3 +106,4 @@ output "ec2_public_ip" {
 output "s3_bucket_name" {
   value = aws_s3_bucket.harsh_bucket.bucket
 }
+
