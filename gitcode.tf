@@ -1,6 +1,4 @@
-# -------------------------------
-# VARIABLES SECTION
-# -------------------------------
+
 variable "aws_region" {
   default = "us-west-1"
 }
@@ -21,9 +19,7 @@ variable "availability_zone" {
   default = "us-west-1a"
 }
 
-# -------------------------------
-# MAIN RESOURCES
-# -------------------------------
+
 provider "aws" {
   region = var.aws_region
 }
@@ -116,3 +112,4 @@ resource "aws_security_group" "harsh_sg" {
 output "s3_bucket_name" {
   value = aws_s3_bucket.harsh_bucket.bucket
 }
+
